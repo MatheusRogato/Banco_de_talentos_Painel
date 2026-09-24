@@ -1,0 +1,152 @@
+@import "tailwindcss";
+
+:root {
+  --bg-app: #020617;
+  --bg-card: #0f172a;
+  --bg-subtle: #020617;
+  --border-app: #1e293b;
+  --text-main: #f8fafc;
+  --text-sub: #94a3b8;
+  --text-muted: #64748b;
+  --input-bg: rgba(2, 6, 23, 0.6);
+}
+
+html.light-mode {
+  --bg-app: #f8fafc;
+  --bg-card: #ffffff;
+  --bg-subtle: #f1f5f9;
+  --border-app: #e2e8f0;
+  --text-main: #0f172a;
+  --text-sub: #334155;
+  --text-muted: #64748b;
+  --input-bg: #ffffff;
+}
+
+body {
+  background-color: var(--bg-app);
+  color: var(--text-main);
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+/* ==========================================
+   LIGHT MODE OVERRIDES FOR EXISTING UTILITIES
+   ========================================== */
+html.light-mode .bg-slate-950 {
+  background-color: #f8fafc !important;
+}
+
+html.light-mode .bg-slate-900 {
+  background-color: #ffffff !important;
+  border-color: #e2e8f0 !important;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.05) !important;
+}
+
+html.light-mode .bg-slate-950\/40,
+html.light-mode .bg-slate-950\/50,
+html.light-mode .bg-slate-950\/60,
+html.light-mode .bg-slate-950\/80 {
+  background-color: #f1f5f9 !important;
+}
+
+html.light-mode .bg-slate-900\/80,
+html.light-mode .bg-slate-900\/90,
+html.light-mode .bg-slate-900\/60 {
+  background-color: #ffffff !important;
+}
+
+html.light-mode .bg-slate-800,
+html.light-mode .bg-slate-800\/60,
+html.light-mode .bg-slate-800\/80 {
+  background-color: #e2e8f0 !important;
+}
+
+html.light-mode .border-slate-800,
+html.light-mode .border-slate-800\/80,
+html.light-mode .border-slate-800\/60,
+html.light-mode .border-slate-700 {
+  border-color: #cbd5e1 !important;
+}
+
+html.light-mode .text-white {
+  color: #0f172a !important;
+}
+
+html.light-mode .text-slate-100,
+html.light-mode .text-slate-200 {
+  color: #1e293b !important;
+}
+
+html.light-mode .text-slate-300,
+html.light-mode .text-slate-400 {
+  color: #475569 !important;
+}
+
+html.light-mode .text-slate-500 {
+  color: #64748b !important;
+}
+
+/* Accent Colors Contrast Optimization in Light Mode */
+html.light-mode .text-sky-400 {
+  color: #0284c7 !important;
+}
+
+html.light-mode .text-amber-400 {
+  color: #d97706 !important;
+}
+
+html.light-mode .text-emerald-400 {
+  color: #059669 !important;
+}
+
+html.light-mode .text-purple-400 {
+  color: #9333ea !important;
+}
+
+html.light-mode .text-rose-400 {
+  color: #e11d48 !important;
+}
+
+/* Sidebar and Header adjustments */
+html.light-mode aside {
+  background-color: #ffffff !important;
+  border-color: #e2e8f0 !important;
+}
+
+html.light-mode input,
+html.light-mode textarea,
+html.light-mode select {
+  background-color: #ffffff !important;
+  color: #0f172a !important;
+  border-color: #cbd5e1 !important;
+}
+
+html.light-mode input::placeholder,
+html.light-mode textarea::placeholder {
+  color: #94a3b8 !important;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: rgba(15, 23, 42, 0.6);
+}
+
+html.light-mode .custom-scrollbar::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(51, 65, 85, 0.8);
+  border-radius: 9999px;
+}
+
+html.light-mode .custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(14, 165, 233, 0.8);
+}
+
